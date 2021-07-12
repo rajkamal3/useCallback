@@ -5,7 +5,7 @@ function App() {
   const [number, setNumber] = useState(1);
   const [dark, setDark] = useState(false);
   
-  // useCallback will return a memoized version of the callback that only changes if one of the inputs has changed.
+  // useCallback will return a memoized version of the callback that only changes if one of the inputs has changed. It is similar to useMemo but useMemo returns only the return value but useCallback returns the entire function.
   const getItems = useCallback(() => {
     return [number, number + 1, number + 2];
   }, [number]);
